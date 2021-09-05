@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="aado2.css">
+<title>A-aDO2</title>
+
+</head>
+<body>
+  <div id="container">
+  <form name="form1">
+    <div id="input">
+<p>PaCO2：<input type="number" name="paco2" style="font-size:40px;width:200px;height:40px;">Torr</p>
+<p>PaO2：<input type="number" name="pao2" style="font-size:40px;width:200px;height:40px;">Torr</p>
+<p><select name="select" style="font-size:24px" onchange="selectboxChange();">
+<option value="21">酸素使用状況選択</option>
+<option value="21">室内気(RA)</option>
+<option value="24">経鼻酸素1L/min</option>
+<option value="28">経鼻酸素2L/min</option>
+<option value="32">経鼻酸素3L/min</option>
+<option value="36">経鼻酸素4L/min</option>
+<option value="40">経鼻酸素5L/min</option>
+<option value="44">経鼻酸素6L/min</option>
+<option value="40">酸素マスク5L/min</option>
+<option value="50">酸素マスク6L/min</option>
+<option value="60">酸素マスク7L/min</option>
+<option value="60">リザーバー付きマスク6L/min</option>
+<option value="70">リザーバー付きマスク7L/min</option>
+<option value="80">リザーバー付きマスク8L/min</option>
+<option value="90">リザーバー付きマスク9L/min</option>
+<option value="100">リザーバー付きマスク10L/min</option>
+</select>
+  FiO2：<input type="number" name="fio2" value="21" style="font-size:40px;width:200px;height:40px;">%</p>
+    </div>
+  <div id="button">
+<p><input type="button" class="btn" value="計算" onclick="fio2add()"></p>
+</div>
+  <div id="output">
+<p style="font-size:32px;" class="border">A-aDO2：<input type="number" name="result" style="font-size:40px;width:200px;height:40px;"></p>
+<p style="font-size:24px;">計算式：<id id="keisansiki"></id></p>
+</div>
+</form>
+<p style="font-size:24px;"><説明></p>
+<div id="explain">
+大気圧(760mmHg)で37℃(水蒸気圧47mmHg)の場合：<br>
+A-aDO2<br>
+ = PAO2 - PaO2<br>
+ = PIO2 - PaCO2/0.8 - PaO2<br>
+ = (760 - 47) × FiO2 - PaCO2/0.8 - PaO2<br>
+
+</div>
+</div>
+</body>
+<script src="aado2.js"></script>
+</html>

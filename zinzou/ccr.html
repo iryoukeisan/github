@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="ccr.css">
+<title>Ccr計算</title>
+
+</head>
+<body>
+<div id="container">
+  <form name="form1">
+<div id="input">
+<p>年齢：<input type="number" name="age"  style="font-size:40px;width:200px;height:40px;">歳</p>
+<!--<p>身長：<input type="number" name="height">cm</p>　身長いらない-->
+<p>体重：<input type="number" name="weight"  style="font-size:40px;width:200px;height:40px;">kg</p>
+<p>Cr：<input type="number" name="cr"  style="font-size:40px;width:200px;height:40px;">mg/dL</p>
+<p>性別：<input type="radio" name="性別" value="男"  style="width:30px;height:30px;" checked="checked" /> 男　
+<input type="radio" name="性別" style="width:30px;height:30px;"  value="女" /> 女</p>
+</div>
+<div id="button">
+<p><input type="button"  class="btn" value="計算" onclick="bmiadd()"></p>
+</div>
+<div id="output">
+<p style="font-size:32px;">Ccr：<input type="number" name="ccrresult" style="font-size:40px;width:200px;height:40px;"></p>
+<p style="font-size:24px;">計算式：<id id="keisansiki"></id></p>
+</div>
+</form>
+</div>
+<script>
+function bmiadd()
+{
+  var a = form1.age.value;
+  //var h = form1.height.value;
+  var w = form1.weight.value;
+  var c = form1.cr.value;
+  var ccr;
+  if(form1.性別.value =="男"){
+    ccr = (140-a)*w/(72*c);
+    document.getElementById('keisansiki').textContent = "(140-" + a + ")×" + w + "/(72×" + c + ")=" + ccr;
+  } else {
+    ccr = 0.85*(140-a)*w/(72*c);
+    document.getElementById('keisansiki').textContent = "0.85×(140-" + a + ")×" + w + "/(72×" + c + ")=" + ccr;
+  }
+  form1.ccrresult.value = ccr;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+#container {
+    display: grid; /* グリッドレイアウト */
+    /*  grid-row-gap: 10px; */
+}
+
+#input{
+  text-align:right;
+  font-size:32px;
+  /*background: #add8e6;*/
+  padding: 5px;
+  border: solid;
+  border-radius:10px;
+}
+
+#button{
+  text-align:center;
+}
+
+.btn {
+  font-size: 28px;
+  height:70px;
+  width:80%;
+}
+
+#output{
+  text-align:left;
+  /*background: #ffb6c1;*/
+  padding : 5px ;
+  border: solid;
+  border-radius:10px;
+}

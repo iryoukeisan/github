@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="bmi.css">
+<title>BMI計算</title>
+
+</head>
+<body>
+  <div id="container">
+  <form name="form1">
+    <div id="input">
+<p>体重：<input type="number" name="weight" style="font-size:40px;width:200px;height:40px;">kg</p>
+<p>身長：<input type="number" name="height" style="font-size:40px;width:200px;height:40px;">cm</p>
+    </div>
+  <div id="button">
+<p><input type="button" class="btn" value="計算" onclick="bmiadd()"></p>
+</div>
+  <div id="output">
+<p style="font-size:32px;">BMI：<input type="number" name="bmiresult" style="font-size:40px;width:200px;height:40px;"></p>
+<p style="font-size:24px;">計算式：<id id="keisansiki"></id></p>
+</div>
+</form>
+</div>
+<script>
+function bmiadd()
+{
+//var num = parseInt(123);
+var w = form1.weight.value;
+var h = form1.height.value;
+//var w = parseInt(docment.getElementById("height").value);
+//var h = parseInt(docment.getElementById("weight").value);
+var bmi = w/((h/100)*(h/100));
+/*docment.getElementById('bmi').textElement = bmi; */
+//window.alert(`ok`);
+form1.bmiresult.value = bmi;
+document.getElementById('keisansiki').textContent = w + "÷" + h/100 + "^2=" + bmi;
+}
+</script>
+</body>
+</html>

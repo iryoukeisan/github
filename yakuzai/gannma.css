@@ -1,0 +1,77 @@
+#container {
+    display: grid; /* グリッドレイアウト */
+    /*  grid-row-gap: 10px; */
+}
+
+#keisanhou{
+  text-align:left;
+  font-size:32px;
+}
+
+.btn1{
+  font-size: 28px;
+  height:50px;
+  width:100px;
+}
+
+.btn2{
+  font-size: 28px;
+  height:70px;
+  width:80%;
+}
+
+#gan{
+  display: block;
+  text-align:right;
+  font-size:32px;
+  /*background: #add8e6;*/
+  padding: 5px;
+  border: solid;
+  border-radius:10px;
+}
+
+#spe{
+  display: none;
+  text-align:right;
+  font-size:32px;
+  /*background: #add8e6;*/
+  padding: 5px;
+  border: solid;
+  border-radius:10px;
+}
+
+#yaku{
+    display: none;
+    text-align:right;
+    font-size:32px;
+    /*background: #add8e6;*/
+    padding: 5px;
+    border: solid;
+    border-radius:10px;
+}
+
+#keisanhoubtn{
+  text-align:right;
+  float: right;
+}
+
+#input{
+  text-align:right;
+  font-size:32px;
+  background: #add8e6;
+  padding : 5px ;
+}
+
+#button{
+  text-align:center;
+}
+
+
+#output{
+  text-align:left;
+  font-size:32px;
+  /*background: #add8e6;*/
+  padding: 5px;
+  border: solid;
+  border-radius:10px;
+}

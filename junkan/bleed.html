@@ -1,0 +1,93 @@
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="bleed.css">
+<title>出血リスク評価</title>
+</head>
+<body>
+<div id="container">
+  <div id="input">
+    <table>
+      <tr>
+        <td id="trt1" onclick="t1()" >
+        活動性消化性潰瘍　4.5点
+      </td>
+    </tr>
+      <tr>
+        <td id="trt2" onclick="t2()">
+        入院3ヶ月以内の出血　4点
+    </td>
+      </tr>
+      <tr>
+        <td id="trt3" onclick="t3()">
+        血小板数＜5万/μL　4点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt4" onclick="t4()">
+        年齢85歳以上　3.5点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt5" onclick="t5()">
+        肝不全 PT-INR＞1.5　2.5点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt6" onclick="t6()">
+        GFR＜30mL/min2　2.5点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt7" onclick="t7()">
+        ICU/CCU入室　2.5点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt8" onclick="t8()">
+        中心静脈カテーテル留置　2点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt9" onclick="t9()">
+        リウマチ性疾患　2点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt10" onclick="t10()">
+         がん　2点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt11" onclick="t11()">
+        40〜84歳　1点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt12" onclick="t12()">
+        男性　1点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt13" onclick="t13()">
+        GFR=30〜59ml/min2　1点
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="output">
+    出血リスク評価　
+  </div>
+  <p style="font-size:24px;"><説明></p>
+  <div id="explain">
+    (内科入院患者に適応)<br>
+    7点以上：高リスク、7点未満：低リスク<br>
+  </div>
+  <p style="font-size:24px;" ><参考文献></p>
+  <div id="reference">
+  <a href="https://pubmed.ncbi.nlm.nih.gov/20453069/">・Chest 2011;139:69</a>
+  </div>
+</div>
+<script src="bleed.js"></script>
+</body>
+</html>

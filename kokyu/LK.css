@@ -1,0 +1,48 @@
+#container {
+    display: grid; /* グリッドレイアウト */
+    /*  grid-row-gap: 10px; */
+}
+
+table{
+border-collapse: collapse;
+margin-bottom: 24px;
+}
+th,td{
+  border:1px solid #8fbac8;
+  padding:8px;
+}
+.Gen {
+  font-weight: bold;
+  color: #0099FF;
+}
+.Sho{
+ font-weight: bold;
+ color: #0099FF;
+}
+.Enk {
+ font-weight: bold;
+ color: #0099FF;
+}
+.bunrui{
+  font-weight:bold;
+  font-size:30px;
+}
+
+#output{
+  padding : 5px ;
+  border: solid;
+  font-size:32px;
+  border-radius:10px;
+}
+
+#explain{
+  padding : 5px ;
+  font-size:24px;
+  border:thin solid;
+}
+
+#reference{
+  padding : 5px ;
+  font-size:24px;
+  border:thin solid;
+}

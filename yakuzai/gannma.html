@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="gannma.css">
+<title>γ計算</title>
+<!--
+<style>
+
+</style>
+-->
+
+</head>
+<body>
+<p><id id="keisanhou">薬剤,速度→γ</id><id id="keisanhoubtn"><input type="button" class="btn1" value="変更" onclick="henkouadd()"></id></p>
+
+<id id="gan">
+  <form name="form1">
+<p>体重：<input type="number" name="weight" style="font-size:40px;width:200px;height:40px;" required>kg</p>
+
+<p>薬剤組成：</strong><input type="number" name="solution" style="font-size:40px;width:200px;height:40px;">mg/ml</p>
+
+<p>投与速度：<input type="number" name="speed" style="font-size:40px;width:200px;height:40px;">ml/h</p>
+
+</form>
+</id>
+
+<id id="spe">
+  <form name="form2">
+<p>体重：<input type="number" name="weight" style="font-size:40px;width:200px;height:40px;" required>kg</p>
+
+<p>ガンマ：<input type="number" name="gannma" style="font-size:40px;width:200px;height:40px;">γ mg/kg/min</p>
+
+<p>薬剤組成：</strong><input type="number" name="solution" style="font-size:40px;width:200px;height:40px;">mg/ml</p>
+
+</form>
+</id>
+
+<id id="yaku">
+  <form name="form3">
+<p>体重：<input type="number" name="weight" style="font-size:40px;width:200px;height:40px;" required>kg</p>
+
+<p>ガンマ：<input type="number" name="gannma" style="font-size:40px;width:200px;height:40px;">γ mg/kg/min</p>
+
+<p>投与速度：<input type="number" name="speed" style="font-size:40px;width:200px;height:40px;">ml/h</p>
+
+</form>
+</id>
+<id id="button">
+<p><input type="button" value="計算" class="btn2" onclick="gannmaadd()"></p>
+</id>
+<div id="output">
+<p><id id="kekka"></id></p>
+</id>
+<script>
+document.getElementById("gan").style.display="block";
+document.getElementById('kekka').textContent = "ガンマ：";
+function henkouadd()
+{
+  if(document.getElementById("gan").style.display=="block"){
+    document.getElementById("gan").style.display="none";
+    document.getElementById("spe").style.display="block";
+    document.getElementById('keisanhou').textContent="薬剤,γ→速度";
+    document.getElementById('kekka').textContent = "速度：";
+  }else if (document.getElementById("spe").style.display=="block") {
+    document.getElementById("spe").style.display="none";
+    document.getElementById("yaku").style.display="block";
+    document.getElementById('keisanhou').textContent="γ,速度→薬剤";
+    document.getElementById('kekka').textContent = "薬剤：";
+  }else{
+    document.getElementById("yaku").style.display="none";
+    document.getElementById("gan").style.display="block";
+    document.getElementById('keisanhou').textContent="薬剤,速度→γ";
+    document.getElementById('kekka').textContent = "ガンマ：";
+  }
+}
+/*
+function drugadd()
+{
+  switch (form1.yakuzaikekka.value) {
+    case "yakuzaisosei":
+    var b = form1.drug.value;
+    var c = form1.solvent.value;
+    var d = b/c;
+    form1.solution.value = d;
+    break;
+    case "yakuzai":
+    var c = form1.solvent.value;
+    var d = form1.solution.value;
+    var b = c*d;
+    form1.drug.value = b;
+    break;
+    case "youbai":
+    var b = form1.drug.value;
+    var d = form1.solution.value;
+    var c = b/d;
+    form1.solvent.value = c;
+    break;
+  }
+}
+*/
+function gannmaadd()
+{
+  if(document.getElementById("gan").style.display=="block"){
+    var a = form1.weight.value;
+    var d = form1.solution.value;
+    var f = form1.speed.value;
+    var e = (f*d)/(0.06*a);
+    document.getElementById('kekka').textContent = "ガンマ：" + e + "　mg/kg/min";
+  }else if (document.getElementById("spe").style.display=="block") {
+    var a = form2.weight.value;
+    var e = form2.gannma.value;
+    var d = form2.solution.value;
+    var f = 0.06*a*e/d;
+    document.getElementById('kekka').textContent = "速度：" + f + "　ml/h";
+  }else{
+    var a = form3.weight.value;
+    var e = form3.gannma.value;
+    var f = form3.speed.value;
+    var d = 0.06*a*e/f;
+    document.getElementById('kekka').textContent = "薬剤：" + d + "　mg/ml";
+  }
+
+}
+
+</script>
+</body>
+</html>

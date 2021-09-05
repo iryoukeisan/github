@@ -1,0 +1,59 @@
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="chads2.css">
+<title>CHADS2スコア</title>
+</head>
+<body>
+<div id="container">
+  <div id="input">
+    <table>
+      <tr>
+        <td id="trt1" onclick="t1()" >
+        Congestive heart failure うっ血性心不全　1点
+      </td>
+    </tr>
+      <tr>
+        <td id="trt2" onclick="t2()">
+        Hypertension 高血圧　1点
+    </td>
+      </tr>
+      <tr>
+        <td id="trt3" onclick="t3()">
+        Age 75歳以上　1点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt4" onclick="t4()">
+        Diabetes mellitus 糖尿病　1点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt5" onclick="t5()">
+        Stroke/transient ischemic attack 脳卒中/一過性脳虚血発作　2点
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="output">
+    CHADS2スコア：
+  </div>
+  <p style="font-size:24px;"><説明></p>
+  <div id="explain">
+    ~1年以内に脳梗塞を起こすリスク~<br>
+    0点-1.9%<br>
+    1点-2.8%<br>
+    2点-4.0%<br>
+    3点-5.9%<br>
+    4点-8.5%<br>
+    5点-12.5%<br>
+    6点-18.2%<br>
+  </div>
+  <p style="font-size:24px;" ><参考文献></p>
+  <div id="reference">
+  <a href="https://pubmed.ncbi.nlm.nih.gov/11401607/">・JAMA 2001;285:2864</a>
+  </div>
+</div>
+<script src="chads2.js"></script>
+</body>
+</html>

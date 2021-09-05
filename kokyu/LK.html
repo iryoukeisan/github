@@ -1,0 +1,172 @@
+
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="LK.css">
+<title>TNM分類(8版,2017年)</title>
+<!--
+<style>
+
+</style>
+-->
+</head>
+<body>
+<p style="font-size:32px;">TNM分類(8版,2017年)</p>
+<table>
+  <tr class="Gen">
+    <td>
+    原発腫瘍
+  </td>
+  </tr>
+  <tr id="trt1" onclick="t1()">
+    <td>
+    TX：原発腫瘍の存在が判定できない，あるいは喀痰または気管支洗浄液細胞診でのみ陽性で画像診断や気管支鏡では観察できない
+</td>
+  </tr>
+  <tr id="trt2" onclick="t2()">
+    <td>
+    T0：原発腫瘍を認めない
+    </td>
+  </tr>
+  <tr id="trt3" onclick="t3()">
+    <td>
+    Tis：上皮内癌（carcinoma in situ）：肺野型の場合は，充実成分径0cmかつ病変全体径≦3 cm
+    </td>
+  </tr>
+  <tr>
+    <td>
+    T1：腫瘍の充実成分径≦3cm，肺または臓側胸膜に覆われている，葉気管支より中枢への浸潤が気管支鏡上認められない（すなわち主気管支に及んでいない）
+</td>
+  </tr>
+  <tr id="trt4" onclick="t4()">
+    <td>
+    T1mi：微少浸潤性腺癌：部分充実型を示し，充実成分径≦0.5cmかつ病変全体径≦3 cm
+    </td>
+  </tr>
+  <tr id="trt5" onclick="t5()">
+    <td>
+    T1a：充実成分径≦1cmでかつTis・T1miには相当しない
+    </td>
+  </tr>
+  <tr id="trt6" onclick="t6()">
+    <td>
+    T1b：充実成分径＞1cmでかつ≦2cm
+    </td>
+  </tr>
+  <tr  id="trt7" onclick="t7()">
+    <td>
+    T1c：充実成分径＞2cmでかつ≦3cm
+    </td>
+  </tr>
+  <tr>
+   <td>
+     T2：充実成分径＞3cmでかつ≦5cm，または充実成分径≦3cmでも以下のいずれかであるもの
+     <p>
+       ・主気管支に及ぶが気管分岐部には及ばない
+     </p>
+     <p>
+       ・臓側胸膜に浸潤
+     </p>
+     <p>
+      ・肺門まで連続する部分的または一側全体の無気肺か閉塞性肺炎がある
+     </p>
+   </td>
+</tr>
+<tr id="trt8" onclick="t8()">
+ <td>
+   T2a：充実成分径＞3cmでかつ≦4cm
+ </td>
+</tr>
+<tr>
+ <td id="trt9" onclick="t9()">
+   T2b：充実成分径＞4cmでかつ≦5cm
+ </td>
+</tr>
+<tr id="trt10" onclick="t10()">
+ <td>
+   T3：充実成分径＞5cmでかつ≦7cm，または充実成分径≦5cmでも以下のいずれかであるもの
+   <p>
+     ・壁側胸膜，胸壁（superior sulcus tumorを含む），横隔神経，心膜のいずれかに直接浸潤
+   </p>
+   <p>
+     ・同一葉内の不連続な副腫瘍結節
+   </P>
+ </td>
+</tr>
+<tr id="trt11" onclick="t11()">
+ <td>
+   T4：充実成分径＞7cm，または大きさを問わず横隔膜，縦隔，心臓，大血管，気管，反回神経，食道，椎体，気管分岐部への浸潤，あるいは同側の異なった肺葉内の副腫瘍結節
+ </td>
+</tr>
+</tr>
+<tr class="Sho">
+ <td>
+   N-所属リンパ節
+ </td>
+</tr>
+<tr id="trn1" onclick="n1()">
+ <td>
+   NX：所属リンパ節評価不能
+ </td>
+</tr>
+<tr id="trn2" onclick="n2()">
+ <td>
+   N0：所属リンパ節転移なし
+ </td>
+</tr>
+<tr id="trn3" onclick="n3()">
+ <td>
+   N1：同側の気管支周囲かつ/または同側肺門，肺内リンパ節への転移で原発腫瘍の直接浸潤を含める
+ </td>
+</tr>
+<tr id="trn4" onclick="n4()">
+ <td>
+   N2：同側縦隔かつ/または気管分岐下リンパ節への転移
+ </td>
+</tr>
+<tr id="trn5" onclick="n5()">
+ <td>
+   N3：対側縦隔，対側肺門，同側あるいは対側の前斜角筋，鎖骨上窩リンパ節への転移
+ </td>
+</tr>
+<tr class="Enk">
+ <td>
+   M-遠隔転移
+ </td>
+</tr>
+<tr id="trm1" onclick="m1()">
+ <td>
+   M0：遠隔転移なし
+<tr>
+ <td>
+   M1：遠隔転移がある
+<tr id="trm2" onclick="m2()">
+ <td>
+   M1a：対側肺内の副腫瘍結節，胸膜または心膜の結節，悪性胸水（同側・対側），悪性心囊水
+ </td>
+</tr>
+<tr id="trm3" onclick="m3()">
+ <td>
+   M1b：肺以外の一臓器への単発遠隔転移がある
+ </td>
+</tr>
+<tr id="trm4" onclick="m4()">
+ <td>
+   M1c：肺以外の一臓器または多臓器への多発遠隔転移がある
+ </td>
+</tr>
+</table>
+<div id="output">
+  病期分類：
+</div>
+<p style="font-size:24px;"><説明></p>
+<div id="explain">
+  <img src="../images/LK explain.png" alt="">
+</div>
+<p style="font-size:24px;" ><参考文献></p>
+<div id="reference">
+<a href="https://www.haigan.gr.jp/guideline/2019/1/0/190100000000.html">・日本肺癌学会　ガイドライン</a>
+</div>
+<script src="LK.js"></script>
+</body>
+</html>

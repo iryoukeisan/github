@@ -1,0 +1,83 @@
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="padua.css">
+<title>Padua Prediction Score</title>
+</head>
+<body>
+<div id="container">
+  <div id="input">
+    <table>
+      <tr>
+        <td id="trt1" onclick="t1()" >
+        悪性腫瘍(転移あり、もしくは6ヶ月以内の化学療法か放射線療法)　3点
+      </td>
+    </tr>
+      <tr>
+        <td id="trt2" onclick="t2()">
+        DVT・PEの既往(表在静脈ではない)　3点
+    </td>
+      </tr>
+      <tr>
+        <td id="trt3" onclick="t3()">
+        ベッド上安静3日以上　3点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt4" onclick="t4()">
+        血栓傾向(AtⅢ欠損・プレテインC/S欠損・第Ⅴ因子、抗リン脂質抗体症候群)　3点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt5" onclick="t5()">
+        1ヶ月以内の外傷・外科手術歴　2点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt6" onclick="t6()">
+        年齢70才以上　2点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt7" onclick="t7()">
+        心不全・呼吸不全　1点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt8" onclick="t8()">
+        急性心筋梗塞・脳梗塞　1点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt9" onclick="t9()">
+        感染急性期・リウマチ性疾患　1点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt10" onclick="t10()">
+         BMI＞30　1点
+        </td>
+      </tr>
+      <tr>
+        <td id="trt11" onclick="t11()">
+        ホルモン療法　1点
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="output">
+    Padua Prediction Score：
+  </div>
+  <p style="font-size:24px;"><説明></p>
+  <div id="explain">
+    4点以上：高リスク、4点未満：低リスク<br>
+  ・高リスクでは<a href="bleed.html">出血リスク</a> 低ければ、薬剤による予防を検討。
+  </div>
+  <p style="font-size:24px;" ><参考文献></p>
+  <div id="reference">
+  <a href="https://pubmed.ncbi.nlm.nih.gov/20738765/">・Thromb Haemost 2010; 8: 2450-7</a>
+  </div>
+</div>
+<script src="padua.js"></script>
+</body>
+</html>

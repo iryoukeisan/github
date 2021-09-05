@@ -1,0 +1,62 @@
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="centor.css">
+<title>Centor Score</title>
+</head>
+<body>
+<div id="container">
+  <div id="input">
+    <table>
+      <tr>
+        <td id="trt1" onclick="t1()" >
+        1.体温38度以上(+1)
+      </td>
+    </tr>
+      <tr>
+        <td id="trt2" onclick="t2()">
+        2.咳嗽がない(+1)
+    </td>
+      </tr>
+      <tr>
+        <td id="trt3" onclick="t3()">
+        3.前頸部リンパ節腫脹・圧痛(+1)
+        </td>
+      </tr>
+      <tr>
+        <td id="trt4" onclick="t4()">
+        4.扁桃の腫脹・進出物(+1)
+        </td>
+      </tr>
+      <tr>
+        <td id="trt5" onclick="t5()">
+        5.年齢15才未満(+1)
+        </td>
+      </tr>
+      <tr>
+        <td id="trt6" onclick="t6()">
+        6.年齢45才以上(-1)
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="output">
+    Centor Score：
+  </div>
+  <p style="font-size:24px;"><説明></p>
+  <div id="explain">
+    <p>〜A群溶血性連鎖球菌(GAS)による咽頭炎の確率〜 (2点以上の場合はGAS迅速抗原検査を検討する)</p>
+    0点：2〜3%<br>
+    1点：4〜6%<br>
+    2点：10〜12%<br>
+    3点：27〜28%<br>
+    4〜5点：38〜63%
+  </div>
+  <p style="font-size:24px;" ><参考文献></p>
+  <div id="reference">
+  <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1228750/pdf/cmaj_158_1_75.pdf">・CMAJ. 1998 Jan 13;158(1):75-83.</a>
+  </div>
+</div>
+<script src="centor.js"></script>
+</body>
+</html>

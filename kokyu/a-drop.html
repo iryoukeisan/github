@@ -1,0 +1,61 @@
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="a-drop.css">
+<title>A-DROP</title>
+</head>
+<body>
+<div id="container">
+  <div id="input">
+    <table>
+      <tr>
+        <td id="trt1" onclick="t1()" >
+        A(Age):男性70以上、女性75才以上
+      </td>
+    </tr>
+      <tr>
+        <td id="trt2" onclick="t2()">
+        D(Dehydration)：BUN21mg/dL以上または脱水あり
+    </td>
+      </tr>
+      <tr>
+        <td id="trt3" onclick="t3()">
+        R(Respiration)：SpO2 90%以下(PaO2 60Torr以下)
+        </td>
+      </tr>
+      <tr>
+        <td id="trt4" onclick="t4()">
+        O(Orientation)：意識変容あり
+        </td>
+      </tr>
+      <tr>
+        <td id="trt5" onclick="t5()">
+        P(Blood Pressure)：血圧(収縮期) 90mmHg以下
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="output">
+    A-DROP：0点　軽症(外来)
+  </div>
+  <p style="font-size:24px;"><説明></p>
+  <div id="explain">
+    <p style="font-weight:bold;">~重症度判定~</p>
+    軽症：上記5つの項目のいずれも満たさないもの<br>
+    中等症：上記項目の1つまたは2つを有するもの<br>
+    重症：上記項目の3つを有するもの<br>
+    超重症：上記項目の4つまたは5つを有するもの。ただし、ショックがあれば1項目のみでも超重症とする<br>
+    <p style="font-weight:bold;">~治療場所~</p>
+    軽症：外来<br>
+    中等症：外来または入院<br>
+    重症：入院治療<br>
+    超重症：ICU入院<br>
+  </div>
+  <p style="font-size:24px;" ><参考文献></p>
+  <div id="reference">
+  <a href="https://www.jrs.or.jp/modules/guidelines/index.php?content_id=94">・日本呼吸器学会　成人肺炎診療ガイドライン2017</a>
+  </div>
+</div>
+<script src="a-drop.js"></script>
+</body>
+</html>
